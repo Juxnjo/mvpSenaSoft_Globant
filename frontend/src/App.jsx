@@ -6,7 +6,7 @@ function App ()
   return (
     <>
       <h1 className="text-3xl font-bold underline">
-        Branch main
+        Branch development
       </h1>
 
     </>
