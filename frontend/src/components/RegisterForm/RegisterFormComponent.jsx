@@ -14,7 +14,7 @@ export const RegisterFormComponent = () =>
                 <button type='submit' className='bg-semiDarkBlue w-3/4 hover:bg-semiLightBlue text-white font-semibold my-2 py-2 px-4 rounded-md'>Sign in</button>
             </form>
             <div>
-                <p>Already have an account? <Link to='/' className="text-lightBlue">Log in.</Link></p>
+                <p>Already have an account? <Link to='/login' className="text-lightBlue">Log in.</Link></p>
             </div>
         </>
     )
