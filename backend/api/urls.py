@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import (StudentCreateAPIView, StudentListAPIView, StudentRetrieveAPIView, StudentDestroyAPIView, StudentUdateAPIView, TicketCreateAPIView, TicketListAPIView, TicketRetrieveAPIView, FollowUpCreateAPIView, FollowUpListAPIView, FollowUpRetrieveAPIView, FollowUpUdateAPIView, FollowUpDestroyAPIView, FeedbackListAPIView, FeedbackCreateAPIView)
+from .views import (StudentCreateAPIView, StudentListAPIView, StudentRetrieveAPIView, StudentDestroyAPIView, StudentUdateAPIView, TicketCreateAPIView, TicketListAPIView, TicketRetrieveAPIView, FollowUpCreateAPIView, FollowUpListAPIView, FollowUpRetrieveAPIView, FollowUpUdateAPIView, FollowUpDestroyAPIView, FeedbackListAPIView, FeedbackCreateAPIView, LoginView, RegistrationView, LogoutView)
 
 urlpatterns = [
 
@@ -46,6 +46,17 @@ urlpatterns = [
 
     path('feedback/', FeedbackListAPIView.as_view(), name= 'feedback_list'),
 
-    
+
+    # ******** Login ************
+
+    path('login/', LoginView.as_view(), name= 'login'),
+
+    # ******** Register ***********
+
+    path('register/', RegistrationView.as_view(), name= 'register'),
+
+    # ******** Logout ***********
+
+    path('logout/', LogoutView.as_view(), name= 'register'),
 
 ]
