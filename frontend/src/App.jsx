@@ -10,20 +10,18 @@ import { LibraryPage } from "./pages/LibraryPage";
 import { DashboardPage } from "./pages/DashboardPage";
 
 
-function App() {
+function App ()
+{
 
   return (
     <>
       <Routes>
-        <Route path='/' element={<WelcomePage/>} />
-        <Route path='/login' element={<LoginPage />} />
-        <Route path='/home' element={<HomePage />} />
-        <Route path='/register' element={<RegisterPage />} />
-        <Route path='/books' element={<LibraryPage/>}/>
-        
-
-
-
+        <Route path='/' element={ <WelcomePage /> } />
+        <Route path='/login' element={ <LoginPage /> } />
+        <Route path='/home' element={ <HomePage /> } />
+        <Route path='/register' element={ <RegisterPage /> } />
+        <Route path='/books' element={ <LibraryPage /> } />
+        <Route path='/dashboard' element={ <DashboardPage /> } />
       </Routes>
 
     </>
