@@ -2,6 +2,13 @@ import SideBarComponent from "../components/SideBar/SideBarComponent";
 
 export const DashboardPage = () => {
   return (
+<<<<<<< HEAD
+    <div className="flex h-screen items-center justify-center text-center">
+      <SideBarComponent/>
+      <Datatable/>
+      
+    </div>
+=======
     <>
     <SideBarComponent/>
     <div className="h-screen py-14 sm:ml-0 pl-16 lg:pl-0 lg:ml-72 text-white flex gap-3 justify-between pr-10">
@@ -11,5 +18,6 @@ export const DashboardPage = () => {
         
       </div>
     </>
+>>>>>>> main
   )
 }
