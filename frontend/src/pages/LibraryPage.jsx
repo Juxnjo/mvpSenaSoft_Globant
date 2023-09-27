@@ -1,15 +1,29 @@
 import { SideBarComponent } from "../components/SideBar/SideBarComponent";
+import { CardComponent } from "../components/CardLibrary/CardComponent";
 
 export const LibraryPage = () =>
 {
   return (
     <>
+      <SideBarComponent />
       <div className="py-10 sm:ml-0 pl-10 lg:pl-0 lg:ml-72 text-white flex gap-3 justify-between pr-10">
-        <h1 className="font-bold text-4xl">Library</h1>
+        <h1 className="font-bold text-3xl">Resource Library</h1>
+      </div>
+      <div className="flex h-50 items-center justify-center text-center">
+        <div className="font-Roboto text-white">
+          <h1 className="text-3xl font-semibold ">BOOKS</h1>
+          <CardComponent img="pythonbook.jpg" title="Python Book"/>
+          <CardComponent img="algoritmosbook.jpg" title="Algorithms Book" />
+          <CardComponent img="githubbook.jpg" title="GitHub Book"/>
+          <CardComponent img="IAbook.jpg" title="Artificial Intelligence Book" />
+          
+
+        </div>
+
 
       </div>
 
-      <SideBarComponent />
+
 
     </>
   )
