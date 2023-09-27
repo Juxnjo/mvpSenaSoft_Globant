@@ -10,12 +10,9 @@ export const SideBarComponent = () => {
   };
 
   return (
-    <>
-    
-
-    <div className="absolute right-10 top-10 font-bold text-4xl z-30 text-white sm:block lg:hidden" onClick={toggleSidebar}>x</div>
+    <> <div className="absolute right-10 top-10 font-bold text-4xl z-30 text-white sm:block lg:hidden" onClick={toggleSidebar}>x</div>
       <div
-        className={`sidebar fixed top-0 flex h-screen justify-between py-10 flex-col bottom-0 lg:left-0 lg:w-64 bg-[#292B56] shadow duration-700 overflow-y-auto text-center lg:translate-x-0 ${!isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
+        className={`sidebar fixed top-0 flex h-screen justify-between py-10 flex-col bottom-0 lg:left-0 lg:w-64 bg-[#3546E6] duration-700 overflow-y-auto text-center lg:translate-x-0 ${!isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
           }`}
           
       >
