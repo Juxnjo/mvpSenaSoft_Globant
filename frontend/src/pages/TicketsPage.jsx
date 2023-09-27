@@ -1,4 +1,5 @@
-import { SideBarComponent } from "../components/SideBar/SideBarComponent";
+import SideBarComponent from "../components/SideBar/SideBarComponent";
+
 
 export const TicketsPage = () => {
   return (

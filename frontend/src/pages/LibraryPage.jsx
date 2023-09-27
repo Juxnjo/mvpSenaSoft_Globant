@@ -1,5 +1,6 @@
-import { SideBarComponent } from "../components/SideBar/SideBarComponent";
+
 import { CardComponent } from "../components/CardLibrary/CardComponent";
+import SideBarComponent from "../components/SideBar/SideBarComponent";
 
 export const LibraryPage = () =>
 {

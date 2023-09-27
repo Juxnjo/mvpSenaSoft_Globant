@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+#barra-lateral {
+    transform: translateX(-100%);
+    transition: ease .3s;
+  }
+  
+  #barra-lateral.active {
+    transform: translateX(0);
+  }
+  
+  @media screen and (min-width: 976px) {
+    #barra-lateral {
+      transform: translateX(0);
+    }
+  
+    #barra-lateral.active {
+      transform: translateX(0);
+    }
+  }
+  

@@ -7,12 +7,8 @@ import { HomePage } from './pages/HomePage'
 import { TicketsPage } from './pages/TicketsPage'
 
 import { RegisterPage } from "./pages/RegisterPage";
-<<<<<<< HEAD
-import { CommunityPage } from './pages/CommunityPage';
-=======
 import { LibraryPage } from "./pages/LibraryPage";
 import { DashboardPage } from "./pages/DashboardPage";
->>>>>>> main
 
 
 function App ()
@@ -29,14 +25,8 @@ function App ()
         <Route path='/books' element={ <LibraryPage /> } />
         <Route path='/dashboard' element={ <DashboardPage /> } />
         <Route path='/ticket' element={<TicketsPage />} />
-<<<<<<< HEAD
-
-        <Route path='/register' element={<RegisterPage />} />
-        <Route path='/comunnity' element={<CommunityPage />} />
-=======
        
 
->>>>>>> main
 
       </Routes>
 
