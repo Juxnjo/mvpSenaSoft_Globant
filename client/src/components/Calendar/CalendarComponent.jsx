@@ -1,11 +1,9 @@
+import React from 'react'
 
-
-function CalendarComponent() {
-    return(
-        <>
-            
-        </>
-    )
+export const CalendarComponent = () => {
+  return (
+    <div>CalendarComponent</div>
+  )
 }
 
 export default CalendarComponent

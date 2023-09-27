@@ -1,4 +1,5 @@
 
+import CalendarComponent from "../components/Calendar/CalendarComponent"
 import SideBarComponent from "../components/SideBar/SideBarComponent"
 
 
@@ -13,7 +14,7 @@ export const HomePage = () =>
         <h1 className="font-bold text-4xl">Hola! Usuario</h1>
       </div>
       <div className="w-full flex justify-center">
-        
+            <CalendarComponent/>
       </div>
 
     </>
