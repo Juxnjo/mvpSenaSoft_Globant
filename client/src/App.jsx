@@ -9,6 +9,7 @@ import { TicketsPage } from './pages/TicketsPage'
 import { RegisterPage } from "./pages/RegisterPage";
 import { LibraryPage } from "./pages/LibraryPage";
 import { DashboardPage } from "./pages/DashboardPage";
+import CommunityPage from './pages/CommunityPage';
 
 
 function App ()
@@ -25,6 +26,7 @@ function App ()
         <Route path='/books' element={ <LibraryPage /> } />
         <Route path='/dashboard' element={ <DashboardPage /> } />
         <Route path='/ticket' element={<TicketsPage />} />
+        <Route path='/foro' element={<CommunityPage />} />
        
 
 
