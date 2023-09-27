@@ -6,6 +6,7 @@ import { HomePage } from './pages/HomePage'
 import { TicketsPage } from './pages/TicketsPage'
 
 import { RegisterPage } from "./pages/RegisterPage";
+import { CommunityPage } from './pages/CommunityPage';
 
 
 function App() {
@@ -20,7 +21,7 @@ function App() {
         <Route path='/ticket' element={<TicketsPage />} />
 
         <Route path='/register' element={<RegisterPage />} />
-
+        <Route path='/comunnity' element={<CommunityPage />} />
 
       </Routes>
 
