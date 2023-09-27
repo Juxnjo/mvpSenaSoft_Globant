@@ -9,7 +9,7 @@ export const TicketsPage = () => {
   
       <div className="bg-blue-500 py-6 text-white">
         <div className="container mx-auto flex justify-between items-center">
-          <h1 className="font-bold ml-64 text-4xl">Hola! Usuario</h1>
+          <h1 className="font-bold ml-64 text-4xl">Generar Ticket</h1>
           <div className="hidden lg:block w-10 h-10 bg-semiLightBlue rounded-full"></div>
         </div>
       </div>
@@ -211,7 +211,7 @@ export const TicketsPage = () => {
           <div className="mb-4">
             <button
               type="submit"
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full"
+              className="bg-blue-500 hover:bg-blue-700 text-black font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full"
             >
               Enviar
             </button>

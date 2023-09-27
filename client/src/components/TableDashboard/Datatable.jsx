@@ -5,9 +5,9 @@ export const Datatable = () =>
     
 
     return (
-        <div className="flex h-screen items-center justify-center text-center">
+        <div className="flex h-screen items-center justify-center text-center text-black">
             
-            <table className="w-full bg-white rounded-lg overflow-hidden shadow-lg">
+            <table className="w-full bg-white rounded-lg shadow-lg">
                 <thead className="bg-gray-100">
                     <tr>
                         <th className="px-4 py-2">Ticket Id</th>
