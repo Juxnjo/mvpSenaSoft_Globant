@@ -2,6 +2,8 @@ import SideBarComponent from "../components/SideBar/SideBarComponent";
 
 
 export const TicketsPage = () => {
+
+
   return (
     <div className="bg-gray-100 min-h-screen flex flex-col">
   
@@ -16,8 +18,7 @@ export const TicketsPage = () => {
       <div className="container py-6 flex flex-col items-center p-5">
         
         <form
-          action=""
-          method="post"
+
           className="bg-white shadow-md rounded-lg p-6  lg:w-[600px] lg:ml-64"
         >
           <div className="mb-4">

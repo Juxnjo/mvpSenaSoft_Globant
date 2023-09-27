@@ -267,9 +267,15 @@ class LoginView(APIView):
 
         user = authenticate(request, username=username, password=password)
 
+        if "@admin.com" in username:
+            role = 'Admin'
+
+        else:
+            role = 'Student'
+
         if user is not None:
             token, created = Token.objects.get_or_create(user=user)
-            return Response({'token': token.key}, status=status.HTTP_200_OK)
+            return Response({'role': role, 'token': token.key}, status=status.HTTP_200_OK)
         else:
             return Response({'error': 'Credenciales inválidas'}, status=status.HTTP_401_UNAUTHORIZED)
         
