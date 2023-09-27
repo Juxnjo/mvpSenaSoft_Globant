@@ -1,7 +1,5 @@
 from django.db import models
 
-from django.db import models
-
 #Phase list of options
 
 CREADO = 'Creado'
@@ -91,6 +89,8 @@ class Student(models.Model):
     family_education_level = models.CharField(max_length=50, choices=EDUCATION_CHOICES, default=BASICA)
     work_situation = models.CharField(max_length=50, choices=WORK_CHOICES, default=EMPLEADO)
     social_scale = models.PositiveIntegerField(choices=SOCIAL_SCALE, default=ESTRATO_TRES)
+    password = models.CharField(default='User123', max_length=20)
+    is_active = models.BooleanField(default=True)
 
 
     class Meta:
@@ -236,7 +236,7 @@ class Tickets(models.Model):
     support_service = models.CharField(max_length=50, choices=YESNO_CHOICES, default=NO)
     hours_worked = models.CharField(max_length=100, choices=HOURS_WORKED_CHOICES, default=RANGO_1)
     family_support = models.CharField(max_length=50, choices=YESNO_CHOICES, default=SI)
-    stress_levels = models.PositiveIntegerField(max_length=50, choices=AVERAGE_CHOICES, default=ZERO)
+    stress_levels = models.PositiveIntegerField(choices=AVERAGE_CHOICES, default=ZERO)
     stress_source = models.CharField(max_length=100, choices=STRESS_SOURCE_CHOICES, default=SOBRECARGA)
     job_expectations = models.CharField(max_length=50, choices=JOB_EXPECTATIONS_CHOICES, default=MUY_ALTAS)
     comments = models.TextField(null=True, blank= True)
@@ -277,6 +277,14 @@ class Tickets(models.Model):
 
             except Areas.DoesNotExist:
                 return("El Area no existe")
+        
+        else:
+            try:
+                instance = Areas.objects.get(id=4)
+                self.area = instance
+            except Areas.DoesNotExist:
+                return("El Area no existe")
+            
 
     def save(self, *args, **kwargs):
         self.setArea()  # Establecer el area antes de guardar
@@ -297,6 +305,7 @@ class FollowUp(models.Model):
     comments = models.TextField(null=True, blank=True)
     ticket = models.ForeignKey(Tickets, verbose_name='Ticket ID', on_delete=models.CASCADE)
     evidence = models.TextField()
+    is_active = models.BooleanField(default=True)
 
     class Meta:
         verbose_name = 'FollowUp'
@@ -330,6 +339,7 @@ class Feedback(models.Model):
     comments = models.TextField()
     followUp = models.ForeignKey(FollowUp, verbose_name='Follow Up', on_delete=models.CASCADE)
     qualification = models.PositiveIntegerField(choices=QUALIFICATION_CHOICES, default=FIVE)
+    is_active = models.BooleanField(default=True)
 
     class Meta:
         verbose_name = 'Feedback'
