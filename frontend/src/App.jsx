@@ -1,14 +1,16 @@
-import './App.css'
+import { Routes, Route } from "react-router-dom"
+
 
 function App ()
 {
 
   return (
     <>
-      <h1 className="text-3xl font-bold underline">
-        Branch miller efren
-      </h1>
-
+     
+    <Routes>
+      {/* <Route path="/" element={<Login/>}/>
+      <Route path="/home" element={<Home/>}/> */}
+    </Routes>
     </>
   )
 }
