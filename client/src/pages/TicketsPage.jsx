@@ -3,6 +3,9 @@ import { useForm } from "react-hook-form";
 
 export const TicketsPage = () => {
   const {register, handleSubmit} = useForm()
+  const OnSubmit = handleSubmit((data) => {
+    console.log(data)
+    })
 
 
   return (
@@ -18,10 +21,7 @@ export const TicketsPage = () => {
  
       <div className="container py-6 flex flex-col items-center p-5">
         
-        <form onSubmit={handleSubmit((data) => {
-          console.log(data)
-        })}
-
+        <form onSubmit={onSubmit} 
           className="bg-white shadow-md rounded-lg p-6  lg:w-[600px] lg:ml-64"
         >
           <div className="mb-4">
