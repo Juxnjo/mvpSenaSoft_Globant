@@ -8,7 +8,7 @@ export const TicketsPage = () => {
     
     console.log(errors)
     
-  const OnSubmit = handleSubmit((data) => {
+  const onSubmit = handleSubmit((data) => {
     console.log(data)
     })
 
@@ -58,7 +58,7 @@ export const TicketsPage = () => {
               })}
             />
             {
-              errors.rendimiento && <span>{errors.rendimiento.message}</span>
+              errors.rendimiento && <span className="">{errors.rendimiento.message}</span>
             }
             
           </div>
