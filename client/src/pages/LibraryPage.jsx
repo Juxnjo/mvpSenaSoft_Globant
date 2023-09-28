@@ -11,9 +11,8 @@ export const LibraryPage = () =>
         <h1 className="font-bold text-3xl">Resource Library</h1>
       </div>
 
-
-      <div className="flex h-50 items-center justify-center text-center">
-        <div className="font-Roboto text-white lg:ml-64">
+      <div className="flex h-50 items-center lg:ml-64 justify-center text-center">
+        <div className="font-Roboto text-white">
 
           <h1 className="text-3xl font-semibold ">BOOKS</h1>
           <div className="grid lg:grid-cols-3">

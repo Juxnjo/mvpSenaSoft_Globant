@@ -1,7 +1,11 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { useForm } from "react-hook-form";
 
 export const LoginFormComponent = () => {
+
+
+
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
@@ -48,7 +52,7 @@ export const LoginFormComponent = () => {
 
   return (
     <>
-      <form onSubmit={handleLogin}>
+      <form onSubmit={handleLogin }>
         <input
           type="text"
           className="w-3/4 bg-white bg-opacity-20 placeholder:text-white border- border-gray-200   px-4 py-2 rounded-md my-2  "
@@ -56,6 +60,7 @@ export const LoginFormComponent = () => {
           required
           value={username}
           onChange={(e) => setUsername(e.target.value)}
+          
         />
 
         <input
@@ -65,6 +70,7 @@ export const LoginFormComponent = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
+          {...register("password ")}
         />
 
         <button
