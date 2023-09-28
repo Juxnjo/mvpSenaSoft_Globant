@@ -11,7 +11,8 @@ export default {
       semiLightBlue: '#00a7e3',
       lightBlue: '#bbeeff',
       white: '#ffffff',
-      black: '#000000'
+      black: '#000000',
+      red: "#AE2A19"
     },
     fontFamily:{
       Roboto: ['Roboto', 'sans-serif']
