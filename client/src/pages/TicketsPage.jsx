@@ -33,7 +33,9 @@ export const TicketsPage = () => {
               max={10}
               placeholder="Ingrese su rendimiento académico"
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              {...register("rendimiento ")}
+              {...register("rendimiento ", {
+                required: true
+              })}
             />
           </div>
 
@@ -43,7 +45,9 @@ export const TicketsPage = () => {
             </label>
             <select
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              {...register("frecuencia ")}
+              {...register("frecuencia ", {
+                required: true
+              })}
             >
               <option value="diaria">Diaria</option>
               <option value="semanalmente">Semanalmente</option>
@@ -59,7 +63,9 @@ export const TicketsPage = () => {
             <select
               
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              {...register("faltas ")}
+              {...register("faltas ", {
+                required: true
+              })}
             >
               <option value="si">Si</option>
               <option value="no">No</option>
@@ -74,7 +80,9 @@ export const TicketsPage = () => {
             <select
               
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              {...register("participacion")}
+              {...register("participacion", {
+                required: true
+              })}
             >
               <option value="si">Si</option>
               <option value="no">No</option>
@@ -91,7 +99,9 @@ export const TicketsPage = () => {
               max={10}
               placeholder="Ingrese su nivel de estrés"
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              {...register("estres ")}
+              {...register("estres ", {
+                required: true
+              })}
             />
           </div>
 
@@ -102,7 +112,9 @@ export const TicketsPage = () => {
             <select
               
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              {...register("grupos")}
+              {...register("grupos", {
+                required: true
+              })}
             >
               <option value="si">Si</option>
               <option value="no">No</option>
@@ -117,7 +129,9 @@ export const TicketsPage = () => {
             <select
               
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              {...register("horas")}
+              {...register("horas", {
+                required: true
+              })} 
             >
               <option value="0-12">0-12</option>
               <option value="13-24">13-24</option>
@@ -134,7 +148,9 @@ export const TicketsPage = () => {
             <select
               
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              {...register("apoyos")}
+              {...register("apoyos", {
+                required: true
+              })}
             >
               <option value="si">Si</option>
               <option value="no">No</option>
