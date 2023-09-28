@@ -38,19 +38,22 @@ export const TicketsPage = () => {
               placeholder="Ingrese su rendimiento académico"
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               {...register("rendimiento ", {
-                required: true,
-                max: 10,
-                maxLenght: 2
+                required: {
+                  value: true,
+                  message: "Nombre es requerido"
+                },
+                max: {
+                  value: 10,
+                  message: "Maximo 10" 
+                }, 
+                maxLenght: {
+                  value: 2,
+                  message: "Numero de maximo dos caracteres"
+                }
               })}
             />
             {
-              errors.rendimiento?.type === "required" && <span>Rendimiendo es requerido<\span>
-            }
-            {
-              errors.rendimiento?.type === "max" && <span>Maximo 10<\span>
-            }
-            {
-              errors.rendimiento?.type === "maxLenght" && <span>Numero de maximo dos cifras <\span>
+              errors.rendimiento && <span>{errors.rendimiento.message}</span>
             }
             
           </div>
