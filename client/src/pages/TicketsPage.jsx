@@ -5,7 +5,7 @@ export const TicketsPage = () => {
 
 
   return (
-    <div className="bg-gray-100 min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col">
   
       <div className="bg-blue-500 py-6 text-white">
         <div className="container mx-auto flex justify-between items-center">
@@ -18,9 +18,16 @@ export const TicketsPage = () => {
       <div className="container py-6 flex flex-col items-center p-5">
         
         <form
+<<<<<<< HEAD
+          action=""
+          method="post"
+          className="bg-white bg-opacity-5 shadow-md rounded-lg p-6  lg:w-[700px] lg:ml-64"
+=======
 
           className="bg-white shadow-md rounded-lg p-6  lg:w-[600px] lg:ml-64"
+>>>>>>> 84308d1740116d97133d9e2affb790bcca5e7d5c
         >
+          <article className="flex justify-start gap-10">
           <div className="mb-4">
             <label htmlFor="rendimiento" className="block text-gray-700 text-sm font-bold mb-2">
               Rendimiento Académico:
@@ -49,6 +56,7 @@ export const TicketsPage = () => {
               <option value="nunca">Nunca</option>
             </select>
           </div>
+          </article>
 
           <div className="mb-4">
             <label htmlFor="faltas" className="block text-gray-700 text-sm font-bold mb-2">
