@@ -106,7 +106,7 @@ class StudentUdateAPIView(generics.UpdateAPIView):
 #Crear Ticket
 class TicketCreateAPIView(generics.CreateAPIView):
     serializer_class = TicketSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    # permission_classes = [permissions.IsAuthenticated]
 
     #Personalizando la respuesta
     def post(self, request):
@@ -120,13 +120,13 @@ class TicketCreateAPIView(generics.CreateAPIView):
 class TicketListAPIView(GeneralListAPIView):
     queryset = Tickets.objects.filter(is_active = True)
     serializer_class = TicketSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    # permission_classes = [permissions.IsAuthenticated]
 
 
 #Listar por ID de Ticket
 class TicketRetrieveAPIView(generics.RetrieveAPIView):
     serializer_class = TicketSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    # permission_classes = [permissions.IsAuthenticated]
 
     def get_queryset(self):
         return self.get_serializer().Meta.model.objects.filter(is_active= True)
@@ -163,7 +163,7 @@ class TicketRetrieveAPIView(generics.RetrieveAPIView):
 #Crear FollowUp
 class FollowUpCreateAPIView(generics.CreateAPIView):
     serializer_class = FollowUpSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    # permission_classes = [permissions.IsAuthenticated]
 
     #Personalizando la respuesta
     def post(self, request):
@@ -178,13 +178,13 @@ class FollowUpCreateAPIView(generics.CreateAPIView):
 class FollowUpListAPIView(GeneralListAPIView):
     queryset = FollowUp.objects.filter(is_active = True)
     serializer_class = FollowUpSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    # permission_classes = [permissions.IsAuthenticated]
 
 
 #Listar por ID
 class FollowUpRetrieveAPIView(generics.RetrieveAPIView):
     serializer_class = FollowUpSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    # permission_classes = [permissions.IsAuthenticated]
 
     def get_queryset(self):
         return self.get_serializer().Meta.model.objects.filter(is_active= True)
@@ -193,7 +193,7 @@ class FollowUpRetrieveAPIView(generics.RetrieveAPIView):
 #Actualizar
 class FollowUpUdateAPIView(generics.UpdateAPIView):
     serializer_class = FollowUpSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    # permission_classes = [permissions.IsAuthenticated]
 
     def get_queryset(self, pk= None):
         return self.get_serializer().Meta.model.objects.filter(is_active= True).filter(id= pk).first()
@@ -218,7 +218,7 @@ class FollowUpUdateAPIView(generics.UpdateAPIView):
 #Eliminar Logicamente
 class FollowUpDestroyAPIView(generics.DestroyAPIView):
     serializer_class = FollowUpSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    # permission_classes = [permissions.IsAuthenticated]
 
     def get_queryset(self):
         return self.get_serializer().Meta.model.objects.filter(is_active= True)
@@ -238,13 +238,13 @@ class FollowUpDestroyAPIView(generics.DestroyAPIView):
 class FeedbackListAPIView(GeneralListAPIView):
     queryset = Feedback.objects.filter(is_active = True)
     serializer_class = FeedbackSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    # permission_classes = [permissions.IsAuthenticated]
 
 
 #Crear Feedback
 class FeedbackCreateAPIView(generics.CreateAPIView):
     serializer_class = FeedbackSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    # permission_classes = [permissions.IsAuthenticated]
 
     #Personalizando la respuesta
     def post(self, request):
