@@ -9,10 +9,14 @@ import { TicketsPage } from './pages/TicketsPage'
 import { RegisterPage } from "./pages/RegisterPage";
 import { LibraryPage } from "./pages/LibraryPage";
 import { DashboardPage } from "./pages/DashboardPage";
+
 import FollowUpComponent from './components/FollowUpForm/FollowUpComponent';
 import FeedbackFormComponent from './components/FeedbackForm/FeedbackFormComponent';
 import Feedbacks from './pages/Feedbacks';
 import FeedbacksList from './pages/FeedbacksList';
+import CommunityPage from './pages/CommunityPage';
+import FormFollowUp from './pages/FormFollowUp';
+
 
 
 function App ()
@@ -20,6 +24,9 @@ function App ()
 
   return (
     <>
+
+    {/* especifico las rutas y vistas de mi aplicacion */}
+
       <Routes>
 
         <Route path='/' element={ <WelcomePage /> } />
@@ -35,9 +42,9 @@ function App ()
 
 
         <Route path='/ticket' element={<TicketsPage />} />
-       
-
-
+        <Route path='/foro' element={<CommunityPage />} />
+        <Route path='/follow' element={<FormFollowUp />} />
+    
       </Routes>
 
     </>

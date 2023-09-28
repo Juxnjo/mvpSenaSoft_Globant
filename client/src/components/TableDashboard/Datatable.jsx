@@ -24,6 +24,9 @@ export const Datatable = () =>
     
 
     return (
+
+        // COMPONENTE TABLA PARA MOSTRAR DATOS QUE TRAIGAMOS DE LA API
+        
         <div className="flex h-screen items-center justify-center text-center text-black">
             
             <table className="w-full bg-white rounded-lg shadow-lg">
