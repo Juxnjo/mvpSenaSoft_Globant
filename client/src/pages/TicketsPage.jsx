@@ -43,7 +43,7 @@ export const TicketsPage = () => {
               })}
             />
             {
-              errors && <span>Requerido<\span>
+              errors.rendimiento && <span>Rendimiendo es requerido<\span>
             }  
           </div>
 
