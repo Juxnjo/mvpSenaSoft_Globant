@@ -1,7 +1,8 @@
 import SideBarComponent from "../components/SideBar/SideBarComponent";
-
+import { useForm } from "react-hook-form";
 
 export const TicketsPage = () => {
+  const {register, handleSubmit} = useForm()
 
 
   return (
@@ -17,7 +18,9 @@ export const TicketsPage = () => {
  
       <div className="container py-6 flex flex-col items-center p-5">
         
-        <form
+        <form onSubmit={handleSubmit((data) => {
+          console.log(data)
+        })}
 
           className="bg-white shadow-md rounded-lg p-6  lg:w-[600px] lg:ml-64"
         >
@@ -26,11 +29,11 @@ export const TicketsPage = () => {
               Rendimiento Académico:
             </label>
             <input
-              type="text"
-              id="rendimiento"
-              name="rendimiento"
+              type="number"
+              max={10}
               placeholder="Ingrese su rendimiento académico"
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              {...register("rendimiento ")}
             />
           </div>
 
@@ -39,9 +42,8 @@ export const TicketsPage = () => {
               ¿Con qué frecuencia asiste a clases regularmente?
             </label>
             <select
-              id="frecuencia"
-              name="frecuencia"
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              {...register("frecuencia ")}
             >
               <option value="diaria">Diaria</option>
               <option value="semanalmente">Semanalmente</option>
@@ -54,41 +56,30 @@ export const TicketsPage = () => {
             <label htmlFor="faltas" className="block text-gray-700 text-sm font-bold mb-2">
               ¿Ha faltado a exámenes o presentaciones importantes?
             </label>
-            <textarea
-              id="faltas"
-              name="faltas"
-              placeholder="¿Por qué?"
-              rows="5"
+            <select
+              
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            ></textarea>
+              {...register("faltas ")}
+            >
+              <option value="si">Si</option>
+              <option value="no">No</option>
+              
+            </select>
           </div>
 
           <div className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2">
               ¿Participó en programas STEM o actividades relacionadas en la escuela secundaria?
             </label>
-            <div className="flex items-center">
-              <input
-                type="radio"
-                id="stem-si"
-                name="stem"
-                value="si"
-                className="form-radio h-5 w-5 text-blue-500"
-              />
-              <label htmlFor="stem-si" className="ml-2">
-                Si
-              </label>
-              <input
-                type="radio"
-                id="stem-no"
-                name="stem"
-                value="no"
-                className="form-radio h-5 w-5 text-blue-500 ml-8"
-              />
-              <label htmlFor="stem-no" className="ml-2">
-                No
-              </label>
-            </div>
+            <select
+              
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              {...register("participacion")}
+            >
+              <option value="si">Si</option>
+              <option value="no">No</option>
+              
+            </select>
           </div>
 
           <div className="mb-4">
@@ -97,10 +88,10 @@ export const TicketsPage = () => {
             </label>
             <input
               type="number"
-              id="nivelEstrés"
-              name="nivelEstrés"
+              max={10}
               placeholder="Ingrese su nivel de estrés"
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              {...register("estres ")}
             />
           </div>
 
@@ -108,104 +99,47 @@ export const TicketsPage = () => {
             <label className="block text-gray-700 text-sm font-bold mb-2">
               ¿Participa en clubes o grupos de estudio relacionados con STEM?
             </label>
-            <div className="flex items-center">
-              <input
-                type="radio"
-                id="club-si"
-                name="club"
-                value="si"
-                className="form-radio h-5 w-5 text-blue-500"
-              />
-              <label htmlFor="club-si" className="ml-2">
-                Si
-              </label>
-              <input
-                type="radio"
-                id="club-no"
-                name="club"
-                value="no"
-                className="form-radio h-5 w-5 text-blue-500 ml-8"
-              />
-              <label htmlFor="club-no" className="ml-2">
-                No
-              </label>
-            </div>
+            <select
+              
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              {...register("grupos")}
+            >
+              <option value="si">Si</option>
+              <option value="no">No</option>
+              
+            </select>
           </div>
 
           <div className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2">
               ¿Cuántas horas trabaja a la semana (incluyendo trabajo a tiempo parcial y estudio)?
             </label>
-            <div className="flex items-center">
-              <input
-                type="radio"
-                id="horas-0-12"
-                name="horasTrabajo"
-                value="0-12"
-                className="form-radio h-5 w-5 text-blue-500"
-              />
-              <label htmlFor="horas-0-12" className="ml-2">
-                0 a 12
-              </label>
-              <input
-                type="radio"
-                id="horas-13-24"
-                name="horasTrabajo"
-                value="13-24"
-                className="form-radio h-5 w-5 text-blue-500 ml-8"
-              />
-              <label htmlFor="horas-13-24" className="ml-2">
-                13 a 24
-              </label>
-              <input
-                type="radio"
-                id="horas-25-36"
-                name="horasTrabajo"
-                value="25-36"
-                className="form-radio h-5 w-5 text-blue-500 ml-8"
-              />
-              <label htmlFor="horas-25-36" className="ml-2">
-                25 a 36
-              </label>
-              <input
-                type="radio"
-                id="horas-37-48"
-                name="horasTrabajo"
-                value="37-48"
-                className="form-radio h-5 w-5 text-blue-500 ml-8"
-              />
-              <label htmlFor="horas-37-48" className="ml-2">
-                37 a 48
-              </label>
-            </div>
+            <select
+              
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              {...register("horas")}
+            >
+              <option value="0-12">0-12</option>
+              <option value="13-24">13-24</option>
+              <option value="25-36">25-36</option>
+              <option value="37-48">37-48</option>
+              
+            </select>
           </div>
 
           <div className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2">
               ¿Ha utilizado servicios de apoyo académico, como tutorías?
             </label>
-            <div className="flex items-center">
-              <input
-                type="radio"
-                id="tutoria-si"
-                name="tutoria"
-                value="si"
-                className="form-radio h-5 w-5 text-blue-500"
-              />
-              <label htmlFor="tutoria-si" className="ml-2">
-                Si
-              </label>
-              <input
-                type="radio"
-                id="tutoria-no"
-                name="tutoria"
-                value="no"
-                className="form-radio h-5 w-5 text-blue-500 ml-8"
-              />
-              <label htmlFor="tutoria-no" className="ml-2">
-                No
-              </label>
-            </div>
+            <select
+              
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              {...register("apoyos")}
+            >
+              <option value="si">Si</option>
+              <option value="no">No</option>
+              
+            </select>
           </div>
 
           <div className="mb-4">
