@@ -18,14 +18,8 @@ export const TicketsPage = () => {
       <div className="container py-6 flex flex-col items-center p-5">
         
         <form
-<<<<<<< HEAD
-          action=""
-          method="post"
-          className="bg-white bg-opacity-5 shadow-md rounded-lg p-6  lg:w-[700px] lg:ml-64"
-=======
 
           className="bg-white shadow-md rounded-lg p-6  lg:w-[600px] lg:ml-64"
->>>>>>> 84308d1740116d97133d9e2affb790bcca5e7d5c
         >
           <article className="flex justify-start gap-10">
           <div className="mb-4">
