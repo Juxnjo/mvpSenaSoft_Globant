@@ -10,6 +10,7 @@ import { RegisterPage } from "./pages/RegisterPage";
 import { LibraryPage } from "./pages/LibraryPage";
 import { DashboardPage } from "./pages/DashboardPage";
 import CommunityPage from './pages/CommunityPage';
+import FormFollowUp from './pages/FormFollowUp';
 
 
 function App ()
@@ -27,9 +28,8 @@ function App ()
         <Route path='/dashboard' element={ <DashboardPage /> } />
         <Route path='/ticket' element={<TicketsPage />} />
         <Route path='/foro' element={<CommunityPage />} />
-       
-
-
+        <Route path='/follow' element={<FormFollowUp />} />
+    
       </Routes>
 
     </>
