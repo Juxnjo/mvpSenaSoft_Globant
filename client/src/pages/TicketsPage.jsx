@@ -2,7 +2,9 @@ import SideBarComponent from "../components/SideBar/SideBarComponent";
 import { useForm } from "react-hook-form";
 
 export const TicketsPage = () => {
-  const {register, handleSubmit} = useForm()
+  const {register, handleSubmit,
+      formState: {errors}
+    } = useForm()
   const OnSubmit = handleSubmit((data) => {
     console.log(data)
     })
