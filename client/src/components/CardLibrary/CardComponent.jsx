@@ -2,9 +2,13 @@
 
 export const CardComponent = ({title, img}) => {
   return (
-    <div className="w-auto bg-white bg-opacity-20 m-4">
-        <img className="flex m-auto w-1/4 p-2" src={img} alt="" />
-        <h1 className="font-semibold text-xl">{title}</h1>
+    <div className="w-64 h-64  border m-4 rounded-sm hover:scale-105 duration-300">
+        <div className="bg-white h-48 bg-opacity-50 overflow-hidden">
+        <img className="flex m-auto w-40" src={img} alt="" />
+        </div>
+
+        <h1 className="font-normal pt-4 text-xl">{title}</h1>
+     
     </div>
   )
 }
