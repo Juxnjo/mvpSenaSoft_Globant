@@ -9,6 +9,10 @@ import { TicketsPage } from './pages/TicketsPage'
 import { RegisterPage } from "./pages/RegisterPage";
 import { LibraryPage } from "./pages/LibraryPage";
 import { DashboardPage } from "./pages/DashboardPage";
+import FollowUpComponent from './components/FollowUpForm/FollowUpComponent';
+import FeedbackFormComponent from './components/FeedbackForm/FeedbackFormComponent';
+import Feedbacks from './pages/Feedbacks';
+import FeedbacksList from './pages/FeedbacksList';
 
 
 function App ()
@@ -24,6 +28,12 @@ function App ()
         <Route path='/register' element={ <RegisterPage /> } />
         <Route path='/books' element={ <LibraryPage /> } />
         <Route path='/dashboard' element={ <DashboardPage /> } />
+        <Route path="/followup/:id" element={<FollowUpComponent />} />
+        <Route path="/feedbacks" element={<Feedbacks />} />
+        <Route path="/feedback/:id" element={<FeedbackFormComponent />} />
+        <Route path="/feedbacklist" element={<FeedbacksList />} />
+
+
         <Route path='/ticket' element={<TicketsPage />} />
        
 

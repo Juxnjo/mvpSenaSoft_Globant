@@ -9,7 +9,7 @@ const SideBarComponent = () => {
    return (
       <>
 
-         <div onClick={menuLateral} id='menu-hamburguesa' className='absolute z-20 sm:block lg:hidden left-5 top-4 border pl-2 pr-2 text-lg'>
+         <div id='menu-hamburguesa' className='absolute z-20 sm:block lg:hidden left-5 top-4 border pl-2 pr-2 text-lg'>
             <i class="fa-solid fa-bars text-white"></i>
          </div>
          <div id='barra-lateral' className="w-full lg:w-64  bg-[#000] h-screen flex flex-col fixed">
@@ -36,13 +36,34 @@ const SideBarComponent = () => {
                      </div>
                   </li>
                   </Link>
+
+                  <Link to="/feedbacks">
+                  <li className="mb-2">
+                     <div className='flex items-center  gap-4'>
+                        <i class="text-2xl fa-solid fa-folder-open text-white"></i>
+                        <a href="#" className="text-white hover:text-gray-400">Calificar ticket</a>
+                     </div>
+                  </li>
+                  </Link>
+
+                  <Link to="/feedbacklist">
+                  <li className="mb-2">
+                     <div className='flex items-center justify-start gap-5'>
+
+                        <i class="text-2xl fa-solid fa-images text-white"></i>
+                        <a href="#" className="text-white hover:text-gray-400">Ver Feedbacks</a>
+                     </div>
+                  </li>
+                  </Link>
+
                   <Link to="/dashboard">
                   <li className="mb-2">
                   <div className='flex items-center justify-start gap-5'>
                         <i class="text-2xl fa-solid fa-pen-to-square text-white"></i>
                         <a href="#" className="text-white hover:text-gray-400">Dashboard</a>
                      </div>
-                  </li></Link>
+                  </li>
+                  </Link>
                   <li className="mb-2">
                      <div className='flex items-center justify-start gap-5'>
                         <i class="text-2xl fa-solid fa-pen-to-square text-white"></i>
