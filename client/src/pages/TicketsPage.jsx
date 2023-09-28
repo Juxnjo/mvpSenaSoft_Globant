@@ -29,9 +29,10 @@ export const TicketsPage = () =>
       <div className="container py-6 flex flex-col items-center p-5">
 
 
-        <form onSubmit={ onSubmit }>
-          <label htmlFor="">Rendimiento</label>
-          <input type="number" { ...register( "rendimiento", {
+        <form onSubmit={ onSubmit } className="bg-b} bg-opacity-10 shadow-md rounded-lg p-6  lg:w-[600px] lg:ml-64">
+          <div className="flex justify-start flex-col gap-2">
+          <label htmlFor="" className="text-white">Rendimiento</label>
+          <input className="h-10 rounded-sm pl-2" type="number" { ...register( "rendimiento", {
             required: {
               value: true,
               message: "Rendimiento es obligatorio"
@@ -44,23 +45,28 @@ export const TicketsPage = () =>
           {
             errors.rendimiento && <span className="text-red">{ errors.rendimiento.message }</span>
           }
-
-          <label htmlFor="">Frecuencia asistencia</label>
-          <select name="" id="" { ...register( "frecuencia", {
+          </div>
+          <br />
+          <div className="flex justify-start flex-col gap-2">
+          <label className="text-white" htmlFor="">Frecuencia asistencia</label>
+          <select className="h-10 rounded-sm pl-2" name="" id="" { ...register( "frecuencia", {
             required: {
               value: true,
               message: "Debe elegir una opcion",
             }
           } ) }>
-            <option selected ></option>
+            <option  ></option>
             <option value="diaria">Diaria</option>
             <option value="semanalmente">Semanalmente</option>
-            <option value="ocasionalmente">Ocasionalmente</option>
+            <option selected value="ocasionalmente">Ocasionalmente</option>
             <option value="nunca">Nunca</option>
           </select>
-
-          <label htmlFor="">Ha faltado?</label>
-          <select name="" id="" { ...register( "faltas", {
+          </div>
+<br />
+         <div className="flex justify-between gap-5">
+         <div className="">
+         <label className="text-white" htmlFor="">Ha faltado?</label>
+          <select className="w-[270px] h-10" name="" id="" { ...register( "faltas", {
             required: {
               value: true,
               message: "Debe elegir una opcion"
@@ -70,21 +76,31 @@ export const TicketsPage = () =>
             <option value="si">Si</option>
             <option value="no">No</option>
           </select>
+         </div>
 
-          <label htmlFor="">Ha participado en STEM?</label>
-          <select name="" id="" { ...register( "participacion", {
-            required: {
-              value: true,
-              message: "Debe elegir una opcion"
-            }
-          } ) }>
-            <option selected></option>
-            <option value="si">Si</option>
-            <option value="no">No</option>
-          </select>
+        
 
-          <label htmlFor="">Nivel estres</label>
-          <input type="number" { ...register( "estres", {
+          <div className=""> 
+          <label className="text-white" htmlFor="">Ha participado en STEM?</label>
+
+<select className="w-[260px] h-10" name="" id="" { ...register( "participacion", {
+  required: {
+    value: true,
+    message: "Debe elegir una opcion"
+  }
+} ) }>
+  <option selected></option>
+  <option value="si">Si</option>
+  <option value="no">No</option>
+</select>
+          </div>
+
+         </div>
+   
+
+        <div className="flex justify-start flex-col gap-2">
+          <label className="text-white" htmlFor="">Nivel estres</label>
+          <input className="h-10 rounded-sm pl-2" type="number" { ...register( "estres", {
             required: {
               value: true,
               message: "Estres es obligatorio"
@@ -97,11 +113,14 @@ export const TicketsPage = () =>
           {
             errors.estres && <span className="text-red">{ errors.estres.message }</span>
           }
+          </div>
+<br />
 
-          <label >
+<div className="flex justify-start flex-col gap-2">
+<label className="text-white">
             ¿Participa en grupos STEM?
           </label>
-          <select { ...register( "grupos", {
+          <select className="h-10" { ...register( "grupos", {
             required: {
               value: true,
               message: "Elija una opcion"
@@ -114,10 +133,10 @@ export const TicketsPage = () =>
 
           </select>
 
-          <label >
+          <label className="text-white" >
             Horas de trabajo y estudio semanal
           </label>
-          <select  { ...register( "horas", {
+          <select className="h-10"  { ...register( "horas", {
             required: {
               value: true,
               message: "Debe elegir una franja"
@@ -125,17 +144,22 @@ export const TicketsPage = () =>
           } ) }
           >
             <option selected></option>
-            <option value="0-12">0-12</option>
+            <option value="0-12" >0-12</option>
             <option value="13-24">13-24</option>
             <option value="25-36">25-36</option>
             <option value="37-48">37-48</option>
 
           </select>
+          </div>
 
-          <label >
+         
+<br />
+         <div>
+         <label className="text-white">
               Ha recibido apoyo academico
             </label>
-            <select {...register("apoyos", {
+            <br />
+            <select className="w-[200px] h-10" {...register("apoyos", {
                 required: {
                   value: true,
                   message: "Elija una opcion"
@@ -148,25 +172,11 @@ export const TicketsPage = () =>
               
             </select>
 
-            <label >
-              Aceptar terminos y condiciones
-            </label>
-            <input
-              type="checkbox"
-              
-              {...register("terminos", {
-                required: {
-                  value: true,
-                  message: "Debe aceptar los terminos"
-                }
-              })}
-            />
-            {
-            errors.terminos && <span className="text-red">{ errors.terminos.message }</span>
-          }
+           
+         </div>
+<br />
 
-
-          <button type="submit" className="text-white">SUBMIT</button>
+          <button type="submit" className="text-white m-auto py-3 px-4 border">SUBMIT</button>
 
         </form>
       </div>
