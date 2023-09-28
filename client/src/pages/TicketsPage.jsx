@@ -21,6 +21,7 @@ export const TicketsPage = () => {
           action=""
           method="post"
           className="bg-white bg-opacity-5 shadow-md rounded-lg p-6  lg:w-[700px] lg:ml-64"
+
         >
           <article className="flex justify-start gap-10">
           <div className="mb-4">
