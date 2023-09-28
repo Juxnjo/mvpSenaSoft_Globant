@@ -1,7 +1,19 @@
+import { useState, useEffect } from "react";
 
 export const Datatable = () =>
 {
 
+    const [ticketList, setTicketList] = useState([]);
+
+    useEffect(() => {
+        // Realizar la solicitud GET al endpoint
+        fetch('http://127.0.0.1:8000/api/tickets/')
+            .then(response => response.json())
+            .then(data => {
+                setTicketList(data);
+            })
+            .catch(error => console.error('Error', error));
+    }, []);
     
 
     return (
@@ -17,22 +29,17 @@ export const Datatable = () =>
 
                     </tr>
                 </thead>
+                
                 <tbody >
-                    <tr>
-                        <td className="px-4 py-2">Nombre</td>
-                        <td className="px-4 py-2">Posición</td>
-                        <td className="px-4 py-2">Oficina</td>
-                        <td className="px-4 py-2">Edad</td>
-                    </tr>
-                    <tr>
-                        <td className="px-4 py-2">Nombre</td>
-                        <td className="px-4 py-2">Posición</td>
-                        <td className="px-4 py-2">Oficina</td>
-                        <td className="px-4 py-2">Edad</td>
-
-
+                {ticketList.map((ticket) => (
+                    <tr key={ticket.id}>
+                        <td className="px-4 py-2">{ticket.id}</td>
+                        <td className="px-4 py-2">{ticket.student_name} {ticket.student_last_name}</td>
+                        <td className="px-4 py-2">{ticket.area}</td>
+                        <td className="px-4 py-2">{ticket.phase}</td>
                     </tr>
 
+                ))}
 
                 </tbody>
             </table>

@@ -25,26 +25,24 @@ export const LoginFormComponent = () => {
     })
       .then((response) => {
         if (response.ok) {
-          if (response.role === "Admin") {
-            navigate("/dashboard");
-            return response.json();
-          }
-          else {
-            navigate("/ticket")
-            return response.json();
-          }
+          return response.json().then((data) => {
+            const role = data.role;
+            if (role === "Admin") {
+
+              navigate("/dashboard");
+            } else {
+              navigate("/ticket");
+            }
+            console.log(data);
+          });
         } else {
           console.log("Credenciales incorrectas");
           alert("Credenciales incorrectas");
         }
       })
-      .then((data) => {
-        console.log(data);
-      })
       .catch((error) => {
         console.error("Error:", error);
-      });
-  };
+      })};
 
   return (
     <>

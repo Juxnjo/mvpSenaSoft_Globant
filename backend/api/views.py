@@ -120,7 +120,7 @@ class TicketCreateAPIView(generics.CreateAPIView):
 class TicketListAPIView(GeneralListAPIView):
     queryset = Tickets.objects.filter(is_active = True)
     serializer_class = TicketSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    # permission_classes = [permissions.IsAuthenticated]
 
 
 #Listar por ID de Ticket
