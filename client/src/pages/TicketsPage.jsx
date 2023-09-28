@@ -5,6 +5,9 @@ export const TicketsPage = () => {
   const {register, handleSubmit,
       formState: {errors}
     } = useForm()
+    
+    console.log(errors)
+    
   const OnSubmit = handleSubmit((data) => {
     console.log(data)
     })
@@ -39,6 +42,9 @@ export const TicketsPage = () => {
                 required: true
               })}
             />
+            {
+              errors && <span>Requerido<\span>
+            }  
           </div>
 
           <div className="mb-4">
