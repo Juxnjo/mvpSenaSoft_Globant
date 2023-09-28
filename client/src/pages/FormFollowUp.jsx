@@ -4,20 +4,23 @@ import SideBarComponent from '../components/SideBar/SideBarComponent'
 function FormFollowUp() {
     return (
         <>
+
+            {/* IMPORTO EL SIDEBAR */}
             <SideBarComponent />
 
             <div className="h-screen py-14 sm:ml-0 pl-16 flex-col lg:pl-0 lg:ml-72 text-white flex gap-3 pr-10">
                 <h1 className="font-bold text-4xl">Hola! Usuario</h1>
-           
+
 
                 <div className='flex justify-start w-[500px] flex-col'>
-                  
+
+                    {/* FORMULARIO DE SEGUIMIENTO A LOS USUARIOS */}
                     <form
                         action=""
                         method="post"
                         className="bg-white bg-opacity-5 w-full shadow-md rounded-lg p-6 lg:ml-64"
                     >
-  <h1 className='text-center py-5 font-bold text-2xl'>Datos de la Consulta</h1>
+                        <h1 className='text-center py-5 font-bold text-2xl'>Datos de la Consulta</h1>
 
                         <div className="mb-4">
                             <label htmlFor="frecuencia" className="block text-gray-700 text-sm font-bold mb-2">

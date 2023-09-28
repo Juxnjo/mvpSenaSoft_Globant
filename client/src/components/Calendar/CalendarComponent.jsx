@@ -2,6 +2,8 @@ import React from 'react'
 
 export const CalendarComponent = () => {
   return (
+
+    // COMPONENTE CALENDARIO PARA DAR UN ASPECTO MEJOR A LA WEB
   <div className='bg-white bg-opacity-5 p-6 w-[500px]'>
       <h1 className='mb-2 text-center font-bold text-2xl'>Enero 2023</h1>
       <ol cla className='grid grid-cols-7 place-items-center text-right border-b-[1px] pb-2'>

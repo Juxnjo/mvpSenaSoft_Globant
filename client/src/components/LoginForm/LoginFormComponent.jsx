@@ -4,6 +4,8 @@ import { useForm } from "react-hook-form";
 
 export const LoginFormComponent = () => {
 
+  // EN ESTE COMPONENTE VALIDAMOS EL LOGIN Y EL INCIO DE SESSION 
+
 
 
   const [username, setUsername] = useState("");
@@ -13,12 +15,18 @@ export const LoginFormComponent = () => {
   const handleLogin = (event) => {
     event.preventDefault();
 
+    // CONSULTA A LA API
+
     const loginUrl = "http://localhost:8000/api/login/";
+
+  // GUARDAR REGUSTROS EN DATA
 
     const data = {
       username: username,
       password: password,
     };
+
+    // HACEMOS LA SOLICITUD AL BACK Y ESPERAMOS LA RESPUESTA DEPENDIENDO DE QUE SI ES CORRECTO 
 
     fetch(loginUrl, {
       method: "POST",

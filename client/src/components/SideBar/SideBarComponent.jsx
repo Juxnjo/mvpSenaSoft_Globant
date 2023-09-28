@@ -8,7 +8,7 @@ const SideBarComponent = () => {
 
    return (
       <>
-
+{/* COMPONETE MENU LATERAL Y REUTLIZADO EN TODO EL PROYECTO */}
          <div onClick={menuLateral} id='menu-hamburguesa' className='absolute z-20 sm:block lg:hidden left-5 top-4 border pl-2 pr-2 text-lg'>
             <i class="fa-solid fa-bars text-white"></i>
          </div>
