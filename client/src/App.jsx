@@ -18,6 +18,9 @@ function App ()
 
   return (
     <>
+
+    {/* especifico las rutas y vistas de mi aplicacion */}
+
       <Routes>
 
         <Route path='/' element={ <WelcomePage /> } />

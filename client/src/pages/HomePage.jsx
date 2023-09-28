@@ -7,6 +7,8 @@ import SideBarComponent from "../components/SideBar/SideBarComponent"
 export const HomePage = () => {
   return (
     <>
+    {/* importo el componentente MENU LATERAL */}
+
       <SideBarComponent />
   
       <div className="h-screen m-auto">
@@ -21,6 +23,9 @@ export const HomePage = () => {
         </div>
 
         <div className="lg:ml-64 text-white font-light flex justify-start lg:pl-20 px-5 lg:p-5">
+
+          {/* IMPORTO EL COMPONENTE CALENDARIO */}
+          
           <CalendarComponent />
         </div>
           <h2 className="ml-[335px] font-bold text-2xl text-white mt-10">

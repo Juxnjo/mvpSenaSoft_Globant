@@ -2,6 +2,7 @@
 
 export const CardComponent = ({title, img}) => {
   return (
+    // COMPONENTE PARA CREAR LOS LIBROS DE AYUDA DEL SITIO WEB
     <div className="w-64 h-64  border m-4 rounded-sm hover:scale-105 duration-300">
         <div className="bg-white h-48 bg-opacity-50 overflow-hidden">
         <img className="flex m-auto w-40" src={img} alt="" />

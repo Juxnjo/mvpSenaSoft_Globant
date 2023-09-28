@@ -11,6 +11,8 @@ export const LibraryPage = () =>
         <h1 className="font-bold text-3xl">Resource Library</h1>
       </div>
 
+      {/* AQUI SE GUARDARAN LOS LIBROE DE AYUDA QUE TENDRA EL APLICATIVO  */}
+
       <div className="flex h-50 items-center lg:ml-64 justify-center text-center">
         <div className="font-Roboto text-white">
 

@@ -2,6 +2,7 @@ import { RegisterFormComponent } from "../components/RegisterForm/RegisterFormCo
 
 export const RegisterPage = () => {
   return (
+    // PAGINA PARA REGISTRARSE
     <div className="flex h-screen items-center justify-center text-center ">
       <div className="font-Roboto text-white">
         <h1 className="text-3xl font-semibold ">REGISTER ON </h1>

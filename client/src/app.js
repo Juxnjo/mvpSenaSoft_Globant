@@ -1,4 +1,7 @@
 
+
+// USO JS NATIVO PARA AGREGAR EVENTOS Y MANEJAR EL DOM
+
 function menuLateral(event) {
   let barra_lateral = document.querySelector('#barra-lateral');
 
